@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* Cores atualizadas conforme a print da Home */
+    --background-dark: #120b22; /* Fundo principal escuro, próximo ao da print */
+    --background-gradient-start: #1b1030; /* Ponto inicial do gradiente de fundo */
+    --background-gradient-end: #2a154c;   /* Ponto final do gradiente de fundo */
+    --card-background: #1e1136; /* Fundo dos cards, um pouco mais claro que o principal */
+    --accent-color: #6a0572;    /* Um roxo mais forte para destaque (botões, fundos de ícones) */
+    --light-blue: #00bcd4;      /* Azul claro para alguns textos/links */
+    --white-text: #ffffff;      /* Letras brancas */
+    --light-gray-text: #e0e0e0; /* Para textos secundários */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--background-dark); /* Fundo principal escuro */
+    color: var(--light-gray-text); /* Cor de texto padrão, um branco levemente acinzentado */
+    line-height: 1.6;
+}
+
+a {
+    color: var(--light-blue); /* Links em azul claro */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color); /* Links em roxo ao passar o mouse */
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header para páginas internas (sem o hero grande) */
+.header-internal {
+    background: linear-gradient(90deg, var(--background-gradient-start) 0%, var(--background-gradient-end) 100%);
+    padding: 20px 5%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--white-text); /* Logo em branco */
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+    color: var(--light-gray-text); /* Links da navegação em cinza claro */
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color); /* Linha de destaque em roxo */
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active { /* Estilo para o link ativo da página atual */
+    color: var(--accent-color); /* Links da navegação em roxo ao passar o mouse ou se ativo */
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--light-gray-text); /* Texto "Bem vindo, Fulano" */
+    font-size: 1rem;
+}
+
+.user-info .fab.fa-bitcoin {
+    font-size: 1.5rem;
+    color: #ff9900; /* Cor para o ícone de Bitcoin */
+}
+
+/* Section Common Styles */
+.section {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--white-text); /* Títulos de seção em branco */
+    font-weight: 600;
+    text-transform: uppercase; /* Para deixar "SOBRE NÓS" em maiúsculas */
+}
+
+.section-description {
+    font-size: 1.1rem;
+    color: var(--light-gray-text); /* Descrições de seção em cinza claro */
+    margin-bottom: 50px;
+}
+
+/* Sobre Nós Section */
+.about-us-section {
+    background-color: var(--background-dark); /* Fundo da seção Sobre Nós */
+}
+
+.values-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 80px auto; /* Espaçamento inferior maior */
+}
+
+.value-card {
+    background-color: var(--card-background); /* Fundo dos cards de Missão, Visão, Valores */
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.value-card .icon-wrapper {
+    background-color: var(--accent-color); /* Fundo dos ícones em roxo */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+    font-size: 2.5rem; /* Tamanho maior para os ícones principais */
+    color: var(--white-text); /* Ícones em branco */
+}
+
+.value-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--white-text); /* Títulos dos cards em branco */
+    font-weight: 600;
+}
+
+.value-card p {
+    font-size: 1rem;
+    color: var(--light-gray-text); /* Texto dos cards em cinza claro */
+    line-height: 1.7;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left; /* Alinhar texto à esquerda como na print */
+}
+
+.about-image {
+    width: 100%;
+    max-width: 700px; /* Limitar largura da imagem */
+    height: auto;
+    border-radius: 10px;
+    margin: 40px auto; /* Centralizar e dar espaçamento */
+    display: block; /* Para margin auto funcionar */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    margin-bottom: 25px; /* Espaçamento entre parágrafos */
+    line-height: 1.8;
+    color: var(--light-gray-text); /* Texto principal em cinza claro */
+}
+
+/* Footer (reusado do index.html) */
+.footer {
+    background: linear-gradient(90deg, var(--background-dark) 0%, var(--background-gradient-end) 100%);
+    color: var(--light-gray-text);
+    padding: 50px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-left .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--white-text);
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: var(--white-text);
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--light-blue);
+}
+
+.footer-left p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-right h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--white-text);
+}
+
+.footer-right ul {
+    list-style: none;
+}
+
+.footer-right ul li {
+    margin-bottom: 10px;
+}
+
+.footer-right ul li a {
+    color: var(--light-gray-text);
+    transition: color 0.3s ease;
+}
+
+.footer-right ul li a:hover {
+    color: var(--light-blue);
+}
+
+/* Responsividade básica */
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .user-info {
+        margin-top: 15px;
+    }
+
+    .values-container {
+        grid-template-columns: 1fr;
+    }
+
+    .value-card .icon-wrapper {
+        margin: 0 auto 15px auto;
+    }
+
+    .about-content {
+        text-align: center; /* Centraliza texto em telas menores */
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-right {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .social-icons {
+        justify-content: center;
+        display: flex;
+    }
+}

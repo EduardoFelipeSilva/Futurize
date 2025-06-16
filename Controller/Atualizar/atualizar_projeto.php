@@ -1,6 +1,6 @@
 <?php
 
-    include "../database.php";
+    include "C:\\xampp\htdocs\Futurize\Controller\database.php";
 
     $pjt_Id = $_POST['pjt_Id'];
     $pjt_Nome = $_POST['pjt_Nome'];
