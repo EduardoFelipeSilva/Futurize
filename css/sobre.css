@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-    /* Cores atualizadas conforme a print da Home */
+    /* Cores atualizadas conforme a print */
     --background-dark: #120b22; /* Fundo principal escuro, próximo ao da print */
     --background-gradient-start: #1b1030; /* Ponto inicial do gradiente de fundo */
     --background-gradient-end: #2a154c;   /* Ponto final do gradiente de fundo */
     --card-background: #1e1136; /* Fundo dos cards, um pouco mais claro que o principal */
-    --accent-color: #6a0572;    /* Um roxo mais forte para destaque (botões, fundos de ícones) */
-    --light-blue: #00bcd4;      /* Azul claro para alguns textos/links */
+    --accent-color: #6a0572;    /* Um roxo mais forte para destaque */
+    --light-blue: #00bcd4;      /* Azul claro para alguns textos/links (se desejar, ajuste para outro tom) */
     --white-text: #ffffff;      /* Letras brancas */
     --light-gray-text: #e0e0e0; /* Para textos secundários */
 }
@@ -39,18 +39,17 @@ ul {
     list-style: none;
 }
 
-/* Header para páginas internas (sem o hero grande) */
-.header-internal {
-    background: linear-gradient(90deg, var(--background-gradient-start) 0%, var(--background-gradient-end) 100%);
-    padding: 20px 5%;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
 
 .navbar {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 
 .navbar .logo {
@@ -83,27 +82,28 @@ ul {
     transition: width 0.3s ease;
 }
 
-.nav-links a:hover,
-.nav-links a.active { /* Estilo para o link ativo da página atual */
-    color: var(--accent-color); /* Links da navegação em roxo ao passar o mouse ou se ativo */
+.nav-links a:hover {
+    color: var(--accent-color); /* Links da navegação em roxo ao passar o mouse */
 }
 
-.nav-links a:hover::after,
-.nav-links a.active::after {
+.nav-links a:hover::after {
     width: 100%;
 }
 
-.user-info {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--light-gray-text); /* Texto "Bem vindo, Fulano" */
+.login-button {
+    background-color: var(--accent-color); /* Botão Login em roxo */
+    color: var(--white-text); /* Texto do botão em branco */
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
     font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.user-info .fab.fa-bitcoin {
-    font-size: 1.5rem;
-    color: #ff9900; /* Cor para o ícone de Bitcoin */
+.login-button:hover {
+    background-color: #8c009d; /* Um tom ligeiramente mais claro de roxo ao passar o mouse */
+    transform: translateY(-2px);
 }
 
 /* Section Common Styles */
