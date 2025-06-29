@@ -12,7 +12,7 @@
     if(mysqli_query($conexao,$sql_excluir))
     { 
         echo "Exclusão realizada com sucesso";
-        header("location:listar_cadastro.php");
+        header("location: ../../dashboard_usuario.php");
     }else
     {
         echo "Falha ao excluir o cadastro";

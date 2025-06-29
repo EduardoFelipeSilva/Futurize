@@ -8,21 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header class="header-internal">
-        <nav class="navbar">
-            <div class="logo">Futurize</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Projetos</a></li>
-                <li><a href="sobre-nos.html" class="active">Sobre nós</a></li>
-                <li><a href="#">Parceiros</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-            <div class="user-info">
-                <i class="fab fa-bitcoin"></i> <span>Bem vindo, Fulano</span>
-            </div>
-        </nav>
-    </header>
+    <?php 
+        if (isset($_SESSION['admin'])) {
+            include "navbar_logado.php";
+        } elseif (isset($_SESSION['usuario'])) {
+            include "navbar_logado.php";
+        } else {
+            include "navbar.php";
+        }
+    ?>
+
 
     <main>
         <section id="about-us" class="section about-us-section">
@@ -56,25 +51,6 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-left">
-            <div class="logo">Futurize</div>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
-            <p>&copy; 2025 Futurize. All rights reserved</p>
-        </div>
-        <div class="footer-right">
-            <h3>Sobre Nós</h3>
-            <ul>
-                <li><a href="#">Telefone</a></li>
-                <li><a href="#">Email</a></li>
-                <li><a href="#">Endereço</a></li>
-            </ul>
-        </div>
-    </footer>
+<?php include "footer.php"; ?>   
 </body>
 </html>

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* Cores atualizadas conforme a print */
+    --background-dark: #120b22; /* Fundo principal escuro, próximo ao da print */
+    --background-gradient-start: #1b1030; /* Ponto inicial do gradiente de fundo */
+    --background-gradient-end: #2a154c;   /* Ponto final do gradiente de fundo */
+    --card-background: #1e1136; /* Fundo dos cards, um pouco mais claro que o principal */
+    --accent-color: #6a0572;    /* Um roxo mais forte para destaque */
+    --light-blue: #00bcd4;      /* Azul claro para alguns textos/links (se desejar, ajuste para outro tom) */
+    --white-text: #ffffff;      /* Letras brancas */
+    --light-gray-text: #e0e0e0; /* Para textos secundários */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--background-dark); /* Fundo principal escuro */
+    color: var(--light-gray-text); /* Cor de texto padrão, um branco levemente acinzentado */
+    line-height: 1.6;
+}
+
+
+
+body.a {
+    background: linear-gradient(135deg, var(--background-gradient-start), var(--background-gradient-end));
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 100px 0 0; /* espaçamento para a navbar fixa */
+    color: var(--light-gray-text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+
+.section {
+    padding: 100px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.section p {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 15px;
+    }
+
+    .section p {
+        font-size: 0.95rem;
+    }
+}
+

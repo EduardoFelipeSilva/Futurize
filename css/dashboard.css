@@ -204,3 +204,59 @@ h1 {
 .action-buttons .view-button:hover {
     background-color: #0056b3;
 }
+
+.nav-buttons {
+    display: flex;
+    gap: 30px;
+    margin: 40px 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #5a2c91;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-btn:hover {
+    background-color: #6a3ca1;
+    transform: translateY(-2px);
+}
+
+.nav-btn.active {
+    background-color: #444;
+    pointer-events: none;
+    opacity: 0.6;
+    cursor: default;
+}
+
+.icon-action {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    margin: 0 5px;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.icon-action:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.icon-action.delete:hover {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: #ff4d4d;
+}

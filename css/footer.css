@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* Cores atualizadas conforme a print */
+    --background-dark: #120b22; /* Fundo principal escuro, próximo ao da print */
+    --background-gradient-start: #1b1030; /* Ponto inicial do gradiente de fundo */
+    --background-gradient-end: #2a154c;   /* Ponto final do gradiente de fundo */
+    --card-background: #1e1136; /* Fundo dos cards, um pouco mais claro que o principal */
+    --accent-color: #6a0572;    /* Um roxo mais forte para destaque */
+    --light-blue: #00bcd4;      /* Azul claro para alguns textos/links (se desejar, ajuste para outro tom) */
+    --white-text: #ffffff;      /* Letras brancas */
+    --light-gray-text: #e0e0e0; /* Para textos secundários */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--background-dark); /* Fundo principal escuro */
+    color: var(--light-gray-text); /* Cor de texto padrão, um branco levemente acinzentado */
+    line-height: 1.6;
+}
+
+a {
+    color: var(--light-blue); /* Links em azul claro */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+
+/* Footer */
+.footer {
+    /* Gradiente para o fundo do footer, similar à print */
+    background: linear-gradient(90deg, var(--background-dark) 0%, var(--background-gradient-end) 100%);
+    color: var(--light-gray-text); /* Texto do footer em cinza claro */
+    padding: 50px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-left .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--white-text); /* Logo do footer em branco */
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: var(--white-text); /* Ícones sociais em branco */
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.social-icons a:hover {
+    color: var(--light-blue); /* Ícones sociais em azul claro ao passar o mouse */
+}
+
+.footer-left p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-right h3,
+.footer-contact-form h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--white-text); /* Títulos do footer em branco */
+}
+
+.footer-right ul {
+    list-style: none;
+}
+
+.footer-right ul li {
+    margin-bottom: 10px;
+}
+
+.footer-right ul li a {
+    color: var(--light-gray-text); /* Links do footer em cinza claro */
+}
+
+.footer-right ul li a:hover {
+    color: var(--light-blue); /* Links do footer em azul claro ao passar o mouse */
+}
+
+.footer-contact-form {
+    flex-basis: 300px;
+}
+
+.footer-contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-contact-form input[type="text"],
+.footer-contact-form input[type="email"],
+.footer-contact-form textarea {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: var(--white-text); /* Texto de entrada em branco */
+    font-size: 1rem;
+    width: 100%;
+}
+
+.footer-contact-form input::placeholder,
+.footer-contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Placeholder em branco mais transparente */
+}
+
+.footer-contact-form input:focus,
+.footer-contact-form textarea:focus {
+    outline: none;
+    border-color: var(--light-blue); /* Borda ao focar em azul claro */
+    box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.3); /* Sombra ao focar em azul claro */
+}
+
+.footer-contact-form button[type="submit"] {
+    background-color: var(--accent-color); /* Botão de submit em roxo */
+    color: var(--white-text); /* Texto do botão em branco */
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-contact-form button[type="submit"]:hover {
+    background-color: #8c009d;
+    transform: translateY(-2px);
+}
+
+/* Basic Responsiveness (for smaller screens - adjust as needed) */
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        position: relative;
+        padding: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .parceiros-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .parceiro-intro,
+    .parceiros-list {
+        width: 100%;
+    }
+
+    .parceiro-card {
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-right,
+    .footer-contact-form {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .social-icons {
+        justify-content: center;
+        display: flex;
+    }
+}
+
+
+

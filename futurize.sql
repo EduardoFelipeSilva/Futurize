@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 16/06/2025 às 15:06
--- Versão do servidor: 10.4.32-MariaDB
--- Versão do PHP: 8.1.25
+-- Generation Time: Jun 29, 2025 at 11:03 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,45 +18,46 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `futurize`
+-- Database: `futurize`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `parceiro`
+-- Table structure for table `parceiro`
 --
 
 CREATE TABLE `parceiro` (
   `pco_Id` int(11) NOT NULL,
   `pco_Nome` varchar(60) NOT NULL,
   `pco_Foto` varchar(500) DEFAULT NULL,
-  `pco_Reusmo` varchar(250) NOT NULL,
+  `pco_Resumo` varchar(250) NOT NULL,
   `pco_Area` varchar(60) NOT NULL,
   `pco_Site` varchar(120) NOT NULL,
   `pco_Status` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='Tabela Para parceiros';
 
 --
--- Despejando dados para a tabela `parceiro`
+-- Dumping data for table `parceiro`
 --
 
-INSERT INTO `parceiro` (`pco_Id`, `pco_Nome`, `pco_Foto`, `pco_Reusmo`, `pco_Area`, `pco_Site`, `pco_Status`) VALUES
-(1, 'Parceiro 1', 'foto1.jpg', 'Resumo do Parceiro 1', 'Tecnologia', 'https://parceiro1.com', 1),
-(2, 'Parceiro 2', 'foto2.jpg', 'Resumo do Parceiro 2', 'Saúde', 'https://parceiro2.com', 1),
-(3, 'Parceiro 3', 'foto3.jpg', 'Resumo do Parceiro 3', 'Educação', 'https://parceiro3.com', 1),
-(4, 'Parceiro 4', 'foto4.jpg', 'Resumo do Parceiro 4', 'Finanças', 'https://parceiro4.com', 1),
-(5, 'Parceiro 5', 'foto5.jpg', 'Resumo do Parceiro 5', 'Marketing', 'https://parceiro5.com', 1),
-(6, 'Parceiro 6', 'foto6.jpg', 'Resumo do Parceiro 6', 'Entretenimento', 'https://parceiro6.com', 1),
-(7, 'Parceiro 7', 'foto7.jpg', 'Resumo do Parceiro 7', 'Turismo', 'https://parceiro7.com', 1),
-(8, 'Parceiro 8', 'foto8.jpg', 'Resumo do Parceiro 8', 'Consultoria', 'https://parceiro8.com', 1),
-(9, 'Parceiro 9', 'foto9.jpg', 'Resumo do Parceiro 9', 'Agronegócio', 'https://parceiro9.com', 1),
-(10, 'Parceiro 10', 'foto10.jpg', 'Resumo do Parceiro 10', 'Logística', 'https://parceiro10.com', 1);
+INSERT INTO `parceiro` (`pco_Id`, `pco_Nome`, `pco_Foto`, `pco_Resumo`, `pco_Area`, `pco_Site`, `pco_Status`) VALUES
+(1, 'Parceiro 1', 'https://firebasestorage.googleapis.com/v0/b/workup-464af.appspot.com/o/empresa_foto%2FAmbev.jpg?alt=media&token=981237ef-2db1-4780-8763-827a73bf1fae', 'Resumo\r\n', 'Tecnologia', 'https://parceiro1.com', 1),
+(2, 'Parceiro 2', 'https://firebasestorage.googleapis.com/v0/b/workup-464af.appspot.com/o/empresa_foto%2FB2W%20Digital.jpg?alt=media&token=965db6c0-05f7-40e1-8ff9-efded2a68a7d', 'Resumo do Parceiro 2', 'Saúde', 'https://parceiro2.com', 1),
+(3, 'Parceiro 3', 'https://firebasestorage.googleapis.com/v0/b/workup-464af.appspot.com/o/empresa_foto%2FBeyond%20meat.jpg?alt=media&token=38bdf3fe-a9f9-4b3e-81ae-608ad4a84d5d', 'Resumo do Parceiro 3', 'Educação', 'https://parceiro3.com', 1),
+(4, 'Cosan', 'https://firebasestorage.googleapis.com/v0/b/workup-464af.appspot.com/o/empresa_foto%2FCosan.png?alt=media&token=b551aca7-a8e3-4a23-a7a9-6a2fc8acce41', 'Resumo do Parceiro 4', 'Finanças', 'https://parceiro4.com', 1),
+(5, 'Deloitte', 'https://firebasestorage.googleapis.com/v0/b/workup-464af.appspot.com/o/empresa_foto%2FDeloitte.png?alt=media&token=d4510eb2-2dcd-408b-bda1-4fa2073e6d17', 'Resumo do Parceiro 5', 'Marketing', 'https://parceiro5.com', 1),
+(6, 'Embraer', 'https://firebasestorage.googleapis.com/v0/b/workup-464af.appspot.com/o/empresa_foto%2FEmbraer.png?alt=media&token=86f69706-ad01-41c9-a814-de949db53859', 'Resumo do Parceiro 6', 'Entretenimento', 'https://parceiro6.com', 1),
+(7, 'Ernst & Young', 'https://firebasestorage.googleapis.com/v0/b/workup-464af.appspot.com/o/empresa_foto%2FErnst%20%26%20Young%20(EY).png?alt=media&token=431d58a5-fdfe-4b6d-aca4-1641bf3df8f8', 'Resumo do Parceiro 7', 'Turismo', 'https://parceiro7.com', 1),
+(8, 'KPMG', 'https://firebasestorage.googleapis.com/v0/b/workup-464af.appspot.com/o/empresa_foto%2FKPMG.png?alt=media&token=c91fb2b4-865f-4542-ab6d-872daac4c46d', 'Resumo do Parceiro 8', 'Consultoria', 'https://parceiro8.com', 1),
+(9, 'Mercado Livre', 'https://firebasestorage.googleapis.com/v0/b/workup-464af.appspot.com/o/empresa_foto%2FMercado%20Livre.png?alt=media&token=be8f2443-d4e3-428d-9e66-79c60c13dfd4', 'Resumo do Parceiro 9', 'Agronegócio', 'https://parceiro9.com', 1),
+(10, 'Nubank', 'https://firebasestorage.googleapis.com/v0/b/workup-464af.appspot.com/o/empresa_foto%2FNubank.png?alt=media&token=fd397c57-fd30-4a86-8bfb-ccd79b3c0ce4', 'Resumo do Parceiro 10', 'Logística', 'https://parceiro10.com', 1),
+(11, 'dynamo', 'https://firebasestorage.googleapis.com/v0/b/workup-464af.appspot.com/o/empresa_foto%2Fdynamo.png?alt=media&token=1960b6ec-6c98-453a-b230-7f9a109f5791', 'sasas', 'asa', 'http://localhost/Futurize/form_cadas_parceiro.php', 1);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `projeto`
+-- Table structure for table `projeto`
 --
 
 CREATE TABLE `projeto` (
@@ -72,25 +73,26 @@ CREATE TABLE `projeto` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `projeto`
+-- Dumping data for table `projeto`
 --
 
 INSERT INTO `projeto` (`pjt_Id`, `pjt_Nome`, `pjt_Foto`, `pjt_Resumo`, `pjt_DataInicio`, `pjt_DataTermino`, `pjt_Preco`, `pjt_site`, `pjt_Status`) VALUES
-(1, 'Projeto 1', 'foto1_projeto.jpg', 'Resumo do Projeto 1', '2025-01-01', '2025-12-31', 'R$ 100,000', 'https://projeto1.com', 1),
-(2, 'Projeto 2', 'foto2_projeto.jpg', 'Resumo do Projeto 2', '2025-02-01', '2025-11-30', 'R$ 150,000', 'https://projeto2.com', 1),
-(3, 'Projeto 3', 'foto3_projeto.jpg', 'Resumo do Projeto 3', '2025-03-01', '2025-10-31', 'R$ 200,000', 'https://projeto3.com', 1),
-(4, 'Projeto 4', 'foto4_projeto.jpg', 'Resumo do Projeto 4', '2025-04-01', '2025-09-30', 'R$ 250,000', 'https://projeto4.com', 1),
-(5, 'Projeto 5', 'foto5_projeto.jpg', 'Resumo do Projeto 5', '2025-05-01', '2025-08-31', 'R$ 300,000', 'https://projeto5.com', 1),
-(6, 'Projeto 6', 'foto6_projeto.jpg', 'Resumo do Projeto 6', '2025-06-01', '2025-07-31', 'R$ 350,000', 'https://projeto6.com', 1),
-(7, 'Projeto 7', 'foto7_projeto.jpg', 'Resumo do Projeto 7', '2025-07-01', '2025-12-31', 'R$ 400,000', 'https://projeto7.com', 1),
-(8, 'Projeto 8', 'foto8_projeto.jpg', 'Resumo do Projeto 8', '2025-08-01', '2025-06-30', 'R$ 450,000', 'https://projeto8.com', 1),
-(9, 'Projeto 9', 'foto9_projeto.jpg', 'Resumo do Projeto 9', '2025-09-01', '2025-05-31', 'R$ 500,000', 'https://projeto9.com', 1),
-(10, 'Projeto 10', 'foto10_projeto.jpg', 'Resumo do Projeto 10', '2025-10-01', '2025-04-30', 'R$ 550,000', 'https://projeto10.com', 1);
+(1, 'Projeto 1', 'https://firebasestorage.googleapis.com/v0/b/workup-464af.appspot.com/o/publicacao%2FAmbev%202.jpg?alt=media&token=f2326b66-6b96-4226-b7ed-24688d465a35', 'Resumo do resumo', '2025-01-01', '0000-00-00', '', 'C:xampphtdocsFuturizeprojetos.php', 1),
+(2, 'Projeto 2', 'https://firebasestorage.googleapis.com/v0/b/workup-464af.appspot.com/o/publicacao%2FB2W%20Digital%201.jpg?alt=media&token=0c76c833-2f60-4c81-abc2-7263c866dc7d', 'Resumo do Projeto 2', '2025-02-01', '2025-11-30', 'R$ 150,000', 'C:\\xampp\\htdocs\\Futurize/projetos.php', 1),
+(3, 'Projeto 3', 'https://firebasestorage.googleapis.com/v0/b/workup-464af.appspot.com/o/publicacao%2FBeyond%20meat%201.jpg?alt=media&token=40550a61-33c1-4e78-b7ea-2be9e9edb93d', 'Resumo do Projeto 3', '2025-03-01', '2025-10-31', 'R$ 200,000', 'https://projeto3.com', 1),
+(4, 'Projeto 4', 'https://firebasestorage.googleapis.com/v0/b/workup-464af.appspot.com/o/publicacao%2FBeyond%20meat%202.jpg?alt=media&token=8e9ff5b4-abdb-44c7-b137-d24e51a048a0', 'Resumo do Projeto 4', '2025-04-01', '2025-09-30', 'R$ 250,000', 'https://projeto4.com', 1),
+(5, 'Projeto 5', 'https://firebasestorage.googleapis.com/v0/b/workup-464af.appspot.com/o/publicacao%2FCosan%202.jpg?alt=media&token=7cb12f0f-1ce1-4978-a759-7aec3dbe2bd8', 'Resumo do Projeto 5', '2025-05-01', '2025-08-31', 'R$ 300,000', 'https://projeto5.com', 1),
+(6, 'Projeto 6', 'https://firebasestorage.googleapis.com/v0/b/workup-464af.appspot.com/o/publicacao%2FDeloitte%202.jpg?alt=media&token=5d462ac8-587b-450c-a81b-650baa5f5e7a', 'Resumo do Projeto 6', '2025-06-01', '2025-07-31', 'R$ 350,000', 'https://projeto6.com', 1),
+(7, 'Projeto 7', 'https://firebasestorage.googleapis.com/v0/b/workup-464af.appspot.com/o/publicacao%2FEmbraer%202.jpg?alt=media&token=cacb6d04-6b50-4b62-a18a-a4a128e6fbe3', 'Resumo do Projeto 7', '2025-07-01', '2025-12-31', 'R$ 400,000', 'https://projeto7.com', 1),
+(8, 'Projeto 8', 'https://firebasestorage.googleapis.com/v0/b/workup-464af.appspot.com/o/publicacao%2FErnst%20%26%20Young%20(EY)%202.jpg?alt=media&token=a7a2fda8-7fa5-45b4-9073-c05dac450ce3', 'Resumo do Projeto 8', '2025-08-01', '2025-06-30', 'R$ 450,000', 'https://projeto8.com', 1),
+(9, 'Projeto 9', 'https://firebasestorage.googleapis.com/v0/b/workup-464af.appspot.com/o/publicacao%2FNubank%201.jpg?alt=media&token=42487e93-8e1b-4424-90c6-84ec0dd7c05d', 'Resumo do Projeto 9', '2025-09-01', '2025-05-31', 'R$ 500,000', 'https://projeto9.com', 1),
+(10, 'Projeto 10', 'https://firebasestorage.googleapis.com/v0/b/workup-464af.appspot.com/o/publicacao%2FRa%C3%ADzen%202.png?alt=media&token=530f9677-0bbe-4902-a249-c341991d2507', 'Resumo do Projeto 10', '2025-10-01', '2025-04-30', 'R$ 550,000', 'https://projeto10.com', 1),
+(11, 'edu', 'https://firebasestorage.googleapis.com/v0/b/workup-464af.appspot.com/o/publicacao%2Fenel%201.jpg?alt=media&token=4dd55764-7b5d-48d8-9bc4-66024d829784', 'resumo', '2025-06-12', '2025-06-05', '12121', 'http://localhost/Futurize/form_cadas_projetos.php', 1);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `usuario`
+-- Table structure for table `usuario`
 --
 
 CREATE TABLE `usuario` (
@@ -113,64 +115,57 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `usuario`
+-- Dumping data for table `usuario`
 --
 
 INSERT INTO `usuario` (`usr_Id`, `usr_Foto`, `usr_Nome`, `usr_Git`, `usr_Link`, `usr_Area`, `usr_Inst`, `usr_Senha`, `usr_Email`, `usr_Cpf`, `usr_Sexo`, `usr_logradouro`, `usr_NumeroLogr`, `usr_Cidade`, `usr_Status`, `usr_Nivel`) VALUES
-(1, 'usuario1.jpg', 'João Silva', 'https://github.com/joao', 'https://linkedin.com/in/joao', 'Desenvolvedor', 'Instituição X', 'senha123', 'joao@gmail.com', '12345678900', 'Masculino', 'Rua A', '123', 'São Paulo', 1, 1),
-(2, 'usuario2.jpg', 'Maria Oliveira', 'https://github.com/maria', 'https://linkedin.com/in/maria', 'Designer', 'Instituição Y', 'senha456', 'maria@gmail.com', '23456789012', 'Feminino', 'Rua B', '456', 'Rio de Janeiro', 1, 2),
-(3, 'usuario3.jpg', 'Carlos Souza', 'https://github.com/carlos', 'https://linkedin.com/in/carlos', 'Analista', 'Instituição Z', 'senha789', 'carlos@gmail.com', '34567890123', 'Masculino', 'Rua C', '789', 'Belo Horizonte', 1, 2),
-(4, 'usuario4.jpg', 'Ana Costa', 'https://github.com/ana', 'https://linkedin.com/in/ana', 'Gerente', 'Instituição W', 'senha101112', 'ana@gmail.com', '45678901234', 'Feminino', 'Rua D', '101', 'Salvador', 1, 3),
-(5, 'usuario5.jpg', 'Lucas Pereira', 'https://github.com/lucas', 'https://linkedin.com/in/lucas', 'Consultor', 'Instituição V', 'senha131415', 'lucas@gmail.com', '56789012345', 'Masculino', 'Rua E', '202', 'Porto Alegre', 1, 2),
-(6, 'usuario6.jpg', 'Fernanda Lima', 'https://github.com/fernanda', 'https://linkedin.com/in/fernanda', 'Marketing', 'Instituição U', 'senha161718', 'fernanda@gmail.com', '67890123456', 'Feminino', 'Rua F', '303', 'Curitiba', 1, 2),
-(7, 'usuario7.jpg', 'Paulo Santos', 'https://github.com/paulo', 'https://linkedin.com/in/paulo', 'Financeiro', 'Instituição T', 'senha192021', 'paulo@gmail.com', '78901234567', 'Masculino', 'Rua G', '404', 'Fortaleza', 1, 3),
-(8, 'usuario8.jpg', 'Juliana Rocha', 'https://github.com/juliana', 'https://linkedin.com/in/juliana', 'RH', 'Instituição S', 'senha222324', 'juliana@gmail.com', '89012345678', 'Feminino', 'Rua H', '505', 'Recife', 1, 1),
-(9, 'usuario9.jpg', 'Ricardo Gomes', 'https://github.com/ricardo', 'https://linkedin.com/in/ricardo', 'TI', 'Instituição R', 'senha252627', 'ricardo@gmail.com', '90123456789', 'Masculino', 'Rua I', '606', 'Brasília', 1, 1),
-(10, 'usuario10.jpg', 'Tatiane Silva', 'https://github.com/tatiane', 'https://linkedin.com/in/tatiane', 'Desenvolvedor', 'Instituição Q', 'senha282930', 'tatiane@gmail.com', '01234567890', 'Feminino', 'Rua J', '707', 'São Luís', 1, 2);
+(1, 'https://firebasestorage.googleapis.com/v0/b/workup-464af.appspot.com/o/profile_images%2Fa.jpeg?alt=media&token=958203a7-b005-4b19-ad4a-9d64626cb116', 'Eduardo', 'https://github.com/joao', 'https://linkedin.com/in/joao', 'Desenvolvedor', 'Instituição X', '123', 'joao@gmail.com', '12345678900', 'Masculino', 'Rua A', '', 'São Paulo', 1, 2),
+(2, 'https://firebasestorage.googleapis.com/v0/b/workup-464af.appspot.com/o/profile_images%2Fmuh.png?alt=media&token=29cd5248-e7c8-4c3f-8450-e66f419c00b9', 'Murilo', 'https://github.com/maria', 'https://linkedin.com/in/maria', 'Designer', 'Instituição Y', 'senha456', 'maria@gmail.com', '23456789012', 'Feminino', 'Rua B', '456', 'Rio de Janeiro', 1, 2),
+(3, 'https://firebasestorage.googleapis.com/v0/b/workup-464af.appspot.com/o/profile_images%2Ffeh.png?alt=media&token=fd774eac-1e8f-40c8-acd4-1b5c961d3a81', 'Fernanda', 'https://github.com/carlos', 'https://linkedin.com/in/carlos', 'Analista', 'Instituição Z', '123', 'carlos@gmail.com', '34567890123', 'Masculino', 'Rua C', '', 'Belo Horizonte', 3, 1);
 
 --
--- Índices para tabelas despejadas
+-- Indexes for dumped tables
 --
 
 --
--- Índices de tabela `parceiro`
+-- Indexes for table `parceiro`
 --
 ALTER TABLE `parceiro`
   ADD PRIMARY KEY (`pco_Id`);
 
 --
--- Índices de tabela `projeto`
+-- Indexes for table `projeto`
 --
 ALTER TABLE `projeto`
   ADD PRIMARY KEY (`pjt_Id`);
 
 --
--- Índices de tabela `usuario`
+-- Indexes for table `usuario`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`usr_Id`);
 
 --
--- AUTO_INCREMENT para tabelas despejadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de tabela `parceiro`
+-- AUTO_INCREMENT for table `parceiro`
 --
 ALTER TABLE `parceiro`
-  MODIFY `pco_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `pco_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT de tabela `projeto`
+-- AUTO_INCREMENT for table `projeto`
 --
 ALTER TABLE `projeto`
-  MODIFY `pjt_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `pjt_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT de tabela `usuario`
+-- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `usr_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `usr_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

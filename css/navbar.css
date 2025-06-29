@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* Cores atualizadas conforme a print */
+    --background-dark: #120b22; /* Fundo principal escuro, próximo ao da print */
+    --background-gradient-start: #1b1030; /* Ponto inicial do gradiente de fundo */
+    --background-gradient-end: #2a154c;   /* Ponto final do gradiente de fundo */
+    --card-background: #1e1136; /* Fundo dos cards, um pouco mais claro que o principal */
+    --accent-color: #6a0572;    /* Um roxo mais forte para destaque */
+    --light-blue: #00bcd4;      /* Azul claro para alguns textos/links (se desejar, ajuste para outro tom) */
+    --white-text: #ffffff;      /* Letras brancas */
+    --light-gray-text: #e0e0e0; /* Para textos secundários */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--background-dark); /* Fundo principal escuro */
+    color: var(--light-gray-text); /* Cor de texto padrão, um branco levemente acinzentado */
+    line-height: 1.6;
+}
+
+a {
+    color: var(--light-blue); /* Links em azul claro */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color); /* Links em roxo ao passar o mouse */
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--white-text); /* Logo em branco */
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+    color: var(--light-gray-text); /* Links da navegação em cinza claro */
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color); /* Linha de destaque em roxo */
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color); /* Links da navegação em roxo ao passar o mouse */
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.login-button {
+    background-color: var(--accent-color); /* Botão Login em roxo */
+    color: var(--white-text); /* Texto do botão em branco */
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-button:hover {
+    background-color: #8c009d; /* Um tom ligeiramente mais claro de roxo ao passar o mouse */
+    transform: translateY(-2px);
+}
+
+
+

@@ -6,8 +6,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar Parceiro</title>
-    <link rel="stylesheet" href="css/cadastrar_parceiro.css">
+    <title>Cadastrar Projeto</title>
+    <link rel="stylesheet" href="css/cadastrar_projeto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
@@ -25,40 +25,50 @@
 
     <main class="main-content-form">
         <section id="novo-projeto" class="section new-project-section">
-            <h2>Novo Parceiro</h2>
+            <h2>Novo Projeto</h2>
 
-            <form action="Controller/cadastrar/cadastro_parceiro.php" method="POST" class="project-form">
+            <form action="Controller/cadastrar/cadastro_projeto.php" method="POST" class="project-form">
               <div class="form-row">
                 <div class="input-icon">
                   <i class="fas fa-pen-nib"></i>
-                  <input type="text" id="pco_Nome" name="pco_Nome" placeholder="Nome do Parceiro" required>
+                  <input type="text" id="pjt_Nome" name="pjt_Nome" placeholder="Nome do Projeto" required>
                 </div>
 
               </div>
 
               <div class="input-icon">
                 <i class="fas fa-image"></i> 
-                <input type="text" id="pco_Foto" name="pco_Foto" placeholder="URL da Foto do Parceiro">
+                <input type="text" id="pjt_Foto" name="pjt_Foto" placeholder="URL da Foto do Projeto">
               </div>
 
-            <div class="input-icon">
-                <i class="fas fa-briefcase"></i>
-                <input type="text" id="pco_Area" name="pco_Area" placeholder="Área de parceiro">
-            </div>
+              <div class="input-icon">
+                <i class="fas fa-calendar-plus"></i> 
+                <input type="date" id="pjt_DataInicio" name="pjt_DataInicio">
+              </div>
+
+              <div class="input-icon">
+                <i class="fas fa-calendar-check"></i> 
+                <input type="date" id="pjt_DataTermino" name="pjt_DataTermino">
+              </div>
+
+              <div class="input-icon">
+                <i class="fas fa-dollar-sign"></i> 
+                <input type="text" id="pjt_Preco" name="pjt_Preco" placeholder="Preço do Projeto">
+              </div>
 
               <div class="input-icon">
                 <i class="fas fa-globe"></i> 
-                <input type="text" id="pco_Site" name="pco_Site" placeholder="Site do Parceiro">
+                <input type="text" id="pjt_Site" name="pjt_Site" placeholder="Site do Projeto">
               </div>
 
               <div class="input-icon">
                 <i class="fas fa-clipboard-check"></i>
-                <input type="text" id="pco_Status" name="pco_Status" placeholder="Status do Parceiro">
+                <input type="text" id="pjt_Status" name="pjt_Status" placeholder="Status do Projeto">
               </div>
 
                 <div class="input-icon">
                   <i class="fas fa-align-left"></i> 
-                  <textarea id="pco_Resumoo" name="pco_Resumo" placeholder="Resumo do Parceiro" required></textarea>
+                  <textarea id="pjt_Resumo" name="pjt_Resumo" placeholder="Resumo do projeto" required></textarea>
                 </div>
 
             

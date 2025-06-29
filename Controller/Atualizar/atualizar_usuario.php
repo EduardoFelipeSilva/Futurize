@@ -22,7 +22,7 @@
     //Declarar e realizar a instrução em SQL
     $sql_update = "UPDATE usuario SET usr_Foto = '$usr_Foto', usr_Nome = '$usr_Nome', usr_Git = '$usr_Git', usr_Link = '$usr_Link', usr_Area = '$usr_Area',
     usr_Inst = '$usr_Inst', usr_Senha = '$usr_Senha', usr_Email = '$usr_Email', usr_Cpf = '$usr_Cpf', usr_Sexo = '$usr_Sexo',
-    usr_Logradouro = '$usr_Logradouro', usr_NumeroLogra = '$usr_NumeroLogra', usr_Cidade = '$usr_Cidade', usr_Status = '$usr_Status', usr_Nivel = '$usr_Nivel'
+    usr_Logradouro = '$usr_Logradouro', usr_NumeroLogr = '$usr_NumeroLogr', usr_Cidade = '$usr_Cidade', usr_Status = '$usr_Status', usr_Nivel = '$usr_Nivel'
     WHERE usuario.usr_Id = '$usr_Id'";
 
     echo $sql_update;
@@ -30,8 +30,8 @@
     //Função para conectar os banco de daods e enviar as informações
     if(mysqli_query($conexao,$sql_update))
     { //comando em SQL e Conexão com o banco de dados
-        echo "Atualização realizada com sucesso";
-        header("location:Praverainda.php");
+        header("Location: ../../dashboard_usuario.php?atualizado=1");
+        exit;
     }else
     {
         echo "Falha ao realizar a atualização";

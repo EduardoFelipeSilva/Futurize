@@ -20,8 +20,8 @@
     //Função para conectar os banco de daods e enviar as informações
     if(mysqli_query($conexao,$sql_update))
     { //comando em SQL e Conexão com o banco de dados
-        echo "Atualização realizada com sucesso";
-        header("location:Praverainda.php");
+        header("Location: ../../dashboard_parceiro.php?atualizado=1");
+        exit;
     }else
     {
         echo "Falha ao realizar a atualização";
