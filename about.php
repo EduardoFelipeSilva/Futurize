@@ -8,19 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header class="hero">
-        <nav class="navbar">
-            <div class="logo">Futurize</div>
-            <ul class="nav-links">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="index.php">Projetos</a></li>
-                <li><a href="index.php" class="active">Sobre nós</a></li>
-                <li><a href="index.php">Parceiros</a></li>
-                <li><a href="index.php">Contato</a></li>
-            </ul>
-            <button class="login-button">Login</button>
-        </nav>
-    </header>
+    <?php 
+        if (isset($_SESSION['admin'])) {
+            include "navbar_logado.php";
+        } elseif (isset($_SESSION['usuario'])) {
+            include "navbar_logado.php";
+        } else {
+            include "navbar.php";
+        }
+    ?>
+
 
     <main>
         <section id="about-us" class="section about-us-section">
@@ -54,28 +51,6 @@
         </section>
     </main>
 
-    <section id="contato">
-        <footer class="footer">
-            <div class="footer-left">
-                <div class="logo">Futurize</div>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/gustavoguanabara/"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/gustavoguanabara/?locale=pt_BR"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.youtube.com/cursoemvideo/playlists"><i class="fab fa-youtube"></i></a>
-                    <a href="https://x.com/guanabara"><i class="fab fa-twitter"></i></a>
-                </div>
-                <p>&copy; 2024 Futurize. All right reserved</p>
-            </div>
-            <div class="footer-right">
-                <h3>Sobre Nós</h3>
-                <ul>
-                    <li><a href="#">(11) 4002-8922</a></li>
-                    <li><a href="#">Futurize@futurize.com</a></li>
-                    <li><a href="#">Rua : Carlos de Carvalho, 200 </a></li>
-                </ul>
-            </div>
-
-        </footer>
-    </section>
+<?php include "footer.php"; ?>   
 </body>
 </html>
