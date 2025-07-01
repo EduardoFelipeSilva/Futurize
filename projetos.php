@@ -25,7 +25,7 @@
     <main class="main-content-detail">
         <section id="project-detail" class="section project-detail-section">
             <div class="project-image-container">
-                <img src="https://via.placeholder.com/1000x560/1e1136/FFFFFF?text=Imagem+do+Projeto" alt="Imagem do Projeto" class="main-project-image">
+                <img src="<?php echo $dadosProjetos_db['pjt_Foto']; ?>" alt="<?php echo $dadosProjetos_db['pjt_Nome']; ?>">
             </div>
 
             <div class="project-description">
@@ -37,3 +37,5 @@
         </section>
     </main>
 <?php include "footer.php"; ?>   
+</body>
+</html>

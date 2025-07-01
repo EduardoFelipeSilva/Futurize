@@ -64,7 +64,7 @@
                                 <h3><?php echo $dadosProjetos_db['pjt_Nome']; ?></h3>
                                 <p><?php echo $dadosProjetos_db['pjt_Resumo']; ?></p>
                                 <p><?php echo $dadosProjetos_db['pjt_Status']; ?></p>
-                                <a href="projetos.php" class="read-more" target="_blank">Veja mais <i class="fas fa-arrow-right"></i></a>
+                                <a href="projetos.php?pjt_Id=<?php echo $dadosProjetos_db['pjt_Id']?>" class="read-more" target="_blank">Veja mais <i class="fas fa-arrow-right"></i></a>
                             </div>
                         <?php endwhile; ?>
                     </div>
@@ -140,36 +140,6 @@
         endif;
     ?>
 
-    <section id="contato">
-        <footer class="footer">
-            <div class="footer-left">
-                <div class="logo">Futurize</div>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/gustavoguanabara/"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/gustavoguanabara/?locale=pt_BR"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.youtube.com/cursoemvideo/playlists"><i class="fab fa-youtube"></i></a>
-                    <a href="https://x.com/guanabara"><i class="fab fa-twitter"></i></a>
-                </div>
-                <p>&copy; 2024 Futurize. All right reserved</p>
-            </div>
-            <div class="footer-right">
-                <h3>Sobre Nós</h3>
-                <ul>
-                    <li><a href="#">(11) 4002-8922</a></li>
-                    <li><a href="#">Futurize@futurize.com</a></li>
-                    <li><a href="#">Rua : Carlos de Carvalho, 200 </a></li>
-                </ul>
-            </div>
-            <div class="footer-contact-form">
-                <h3>Entre em contato</h3>
-                <form action="processar_formulario.php" method="POST">
-                    <input type="text" name="nome" placeholder="Seu Nome" required>
-                    <input type="email" name="email" placeholder="Seu Email" required>
-                    <textarea name="mensagem" placeholder="Sua Mensagem" rows="4" required></textarea>
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
-        </footer>
-    </section>
+        <?php include "footer.php" ?>
 </body>
 </html>

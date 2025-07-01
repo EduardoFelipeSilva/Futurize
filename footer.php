@@ -1,6 +1,4 @@
-<?php 
-    require "Controller/sessao.php";
-?>
+
 <section id="contato">
     <footer class="footer">
         <div class="footer-left">
